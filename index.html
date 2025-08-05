@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Library - Discover Amazing Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="loading-book">
+            <div class="book">
+                <div class="book-page"></div>
+                <div class="book-page"></div>
+                <div class="book-page"></div>
+            </div>
+            <h2>Loading Virtual Library...</h2>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">📚 Virtual Library</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#books" class="nav-link">Books</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><button id="dark-mode-toggle" class="dark-mode-btn">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="typewriter">Virtual Library</span>
+            </h1>
+            <p class="hero-subtitle fade-in">Discover a world of knowledge at your fingertips</p>
+            <button class="cta-button" onclick="scrollToSection('books')">
+                <span>Browse Books</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-book book1">📖</div>
+            <div class="floating-book book2">📚</div>
+            <div class="floating-book book3">📕</div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for books, authors, or genres..." class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="books-section">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div id="books-grid" class="books-grid">
+                <!-- Books will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Virtual Library</h2>
+                    <p>Welcome to Virtual Library, your digital gateway to endless knowledge and imagination. Our carefully curated collection spans across genres, bringing you the finest literature, educational resources, and contemporary works.</p>
+                    <p>Whether you're seeking classic novels, cutting-edge research, or inspiring biographies, our virtual shelves are always open, ready to transport you to new worlds and ideas.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>10,000+</h3>
+                            <p>Books Available</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Genres Covered</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Access Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="library-illustration">
+                        <div class="bookshelf">
+                            <div class="shelf"></div>
+                            <div class="books">
+                                <div class="book red"></div>
+                                <div class="book blue"></div>
+                                <div class="book green"></div>
+                                <div class="book yellow"></div>
+                                <div class="book purple"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Virtual Library</h3>
+                    <p>Your digital gateway to knowledge</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with new books and features</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Enter your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Virtual Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Modal -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-cover" src="" alt="Book Cover">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-author" id="modal-author"></p>
+                    <div class="modal-meta">
+                        <span class="genre" id="modal-genre"></span>
+                        <span class="pages" id="modal-pages"></span>
+                        <span class="rating" id="modal-rating"></span>
+                    </div>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-actions">
+                        <button class="btn-primary">Read Now</button>
+                        <button class="btn-secondary">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
