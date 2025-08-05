@@ -2,7 +2,7 @@
 
 A vibrant and responsive digital library built with React.js, featuring a modern UI, smooth animations, and an intuitive user experience for book lovers worldwide.
 
-![Virtual Library](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop)
+
 
 ## ✨ Features
 
